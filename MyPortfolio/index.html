@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Saya</title>
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navbar + Header -->
+    <section class="navbar-header">
+        <header>
+            <h1>Agung Rizki Partogi</h1>
+            <p>Web Developer | Designer | Freelancer</p>
+        </header>
+        <nav>
+            <div class="navbar">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html"><i class="fas fa-user"></i> Tentang Saya</a>
+                <a href="galery.html"><i class="fas fa-images"></i> Galeri</a>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah seorang web developer dengan keahlian di bidang front-end dan back-end. Saya berpengalaman dalam membuat website yang modern dan responsif.</p>
+    </section>
+
+    <!-- Keahlian Saya -->
+    <section id="skills">
+        <h2>Keahlian Saya</h2>
+        <ul>
+            <li>
+                <h3>HTML</h3>
+                <div class="skill-bar">
+                    <div class="skill-level html"></div>
+                </div>
+            </li>
+            <li>
+                <h3>CSS</h3>
+                <div class="skill-bar">
+                    <div class="skill-level js"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <div class="skill-level react"></div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Sertifikat Pelatihan -->
+    <section id="certificates">
+        <h2>Sertifikat Pelatihan</h2>
+        <div class="certificate-item">
+            <img src="assest/picture/certi1.jpeg" alt="Sertifikat 1">
+            <p><strong>Sertifikat Web Development</strong><br>Pelatihan pengembangan web tingkat lanjut yang mencakup HTML, CSS, dan JavaScript</p>
+        </div>
+        <div class="certificate-item">
+            <img src="assest/picture/certi2.jpeg" alt="Sertifikat 2">
+            <p><strong>Sertifikat React Development</strong><br>Pelatihan mendalam tentang pengembangan aplikasi menggunakan React.js</p>
+        </div>
+        <div class="certificate-item">
+            <img src="assest/picture/certi3.jpeg" alt="Sertifikat 3">
+            <p><strong>Sertifikat Desain UI/UX</strong><br>Pelatihan mengenai prinsip desain antarmuka pengguna dan pengalaman pengguna</p>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials">
+        <h2>Apa Kata Klien Kami</h2>
+        <div class="testimonial">
+            <p>"Agung adalah seorang profesional yang sangat berbakat! Proyek yang dia kerjakan sangat memuaskan." - <strong>John Doe</strong>, CEO XYZ Corp.</p>
+        </div>
+        <div class="testimonial">
+            <p>"Kualitas pekerjaan Agung luar biasa. Sangat direkomendasikan untuk proyek web." - <strong>Jane Smith</strong>, Web Designer</p>
+        </div>
+
+        <!-- Grafik Kepuasan Pelanggan -->
+        <div class="chart-container">
+            <canvas id="customerSatisfactionChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Portfolio dengan Filter -->
+    <section id="portfolio">
+        <h2>Portofolio Saya</h2>
+        <div class="portfolio-filters">
+            <button onclick="filterPortfolio('all')">Semua</button>
+            <button onclick="filterPortfolio('web')">Website</button>
+            <button onclick="filterPortfolio('app')">Aplikasi</button>
+            <button onclick="filterPortfolio('design')">Desain</button>
+        </div>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item web">
+                <img src="assest/picture/python.jpeg" alt="Project 1">
+                <p>Project 1</p>
+            </div>
+            <div class="portfolio-item app">
+                <img src="assest/picture/php.jpeg" alt="Project 2">
+                <p>Project 2</p>
+            </div>
+            <div class="portfolio-item design">
+                <img src="assest/picture/dfd.jpeg" alt="Project 3">
+                <p>Project 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta">
+        <h2>Ingin Bekerja Sama?</h2>
+        <p>Jika Anda tertarik untuk bekerja bersama saya, jangan ragu untuk menghubungi saya.</p>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <a href="#contact" class="cta-button">Hubungi Saya</a>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section id="newsletter">
+        <h2>Daftar untuk Update Terbaru</h2>
+        <form>
+            <input type="email" placeholder="Email Anda" required>
+            <button type="submit">Daftar</button>
+        </form>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Hubungi saya melalui email di: <a href="mailto:hansenrp53@gmail.com">hansenrp53@gmail.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Agung Rizki Partogi</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100068164713421&locale=id_ID" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/RpHansen" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/agung-rizki-7b8778255/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/agrzkiprtgi_/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+    <!-- Menyisipkan file JS eksternal -->
+    <script src="assest/js/script.js"></script>
+</body>
+</html>

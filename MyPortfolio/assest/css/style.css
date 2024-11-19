@@ -1,0 +1,883 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style dasar */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 5rem;  /* Memberikan ruang di atas konten agar tidak tertutup header */
+}
+
+/* Navbar + Header (Menyatu secara horizontal) */
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;  /* Mengurangi padding untuk mengecilkan header */
+    background-color: #003c5f;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out;
+    position: fixed;   /* Membuat header tetap di atas halaman */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;     /* Agar header berada di atas konten lainnya */
+}
+
+header {
+    color: white;
+    flex: 1;
+}
+
+header h1 {
+    font-size: 2rem;    /* Menyesuaikan ukuran font */
+    font-weight: 700;
+    animation: slideIn 1s ease-out;
+}
+
+header p {
+    font-size: 1rem;    /* Menyesuaikan ukuran font */
+    color: #a0e8ff;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    transition: background 0.3s;
+    animation: fadeIn 2s ease-out;
+}
+
+.navbar a:hover {
+    background-color: #007398;
+}
+
+/* Animasi Scroll pada Navbar */
+.scroll-navbar {
+    background-color: #002b47; /* Warna navbar saat di-scroll */
+    padding: 0.5rem 2rem; /* Mengurangi padding saat di-scroll */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat di-scroll */
+}
+
+/* Tentang Saya */
+#about {
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Keahlian Saya */
+#skills {
+    text-align: center;
+    padding: 3rem;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills li {
+    margin-bottom: 1rem;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    height: 8px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.skill-level {
+    height: 8px;
+    width: 0%;
+    background-color: #004d7a;
+    transition: width 2s;
+}
+
+.skill-level.html {
+    width: 90%;
+}
+
+.skill-level.js {
+    width: 80%;
+}
+
+.skill-level.react {
+    width: 70%;
+}
+
+/* Sertifikat Pelatihan */
+#certificates {
+    text-align: center;
+    padding: 3rem;
+    background-color: #fff;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+#certificates h2 {
+    font-size: 2.5rem;
+    color: #003c5f;
+    margin-bottom: 1rem;
+}
+
+.certificate-item {
+    display: inline-block;
+    margin: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.certificate-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-item p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Testimonial Section */
+#testimonials {
+    text-align: center;
+    padding: 3rem;
+    background: #f4f4f4;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animasi untuk elemen testimonial */
+.testimonial {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+.testimonial:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.testimonial:nth-child(2) {
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi chart */
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeIn 2s forwards;
+}
+
+/* Styles untuk skill-bar dan level */
+.skill-bar {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.skill-level.html {
+    width: 80%;
+    background-color: #f39c12;
+}
+
+.skill-level.js {
+    width: 70%;
+    background-color: #3498db;
+}
+
+.skill-level.react {
+    width: 60%;
+    background-color: #2ecc71;
+}
+
+
+/* Portfolio Section */
+#portfolio {
+    text-align: center;
+    padding: 3rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+#portfolio h2 {
+    margin: 1rem;
+}
+
+.portfolio-filters {
+    margin-bottom: 2rem;
+}
+
+.portfolio-filters button {
+    background-color: #004d7a;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-filters button:hover {
+    background-color: #006a94;
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.portfolio-item {
+    flex: 1 1 calc(33.333% - 1rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+    transition: transform 0.3s ease; /* Transisi untuk zoom effect */
+}
+
+.portfolio-item p {
+    padding: 1rem;
+}
+
+/* Hover Efek untuk Portfolio */
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Efek zoom pada gambar */
+}
+
+
+/* Call to Action */
+#cta {
+    background-color: #003c5f;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    margin: 1rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+.cta-button {
+    background-color: #004d7a;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ddd;
+}
+
+/* Newsletter */
+#newsletter {
+    text-align: center;
+    padding: 3rem;
+    background: #f4f4f4;
+    animation: fadeIn 1s ease-out;
+}
+
+#newsletter form input {
+    padding: 0.7rem;
+    width: 70%;
+    border: 2px solid #004d7a;
+    margin-right: 1rem;
+}
+
+#newsletter form button {
+    padding: 0.7rem 1.5rem;
+    background-color: #004d7a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Kontak */
+#contact {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 2rem;   /* Mengurangi padding agar footer lebih kecil */
+    background-color: #003c5f;
+    color: white;
+}
+
+footer p {
+    margin: 0.5rem 0;      /* Mengurangi margin untuk memampatkan footer */
+    font-size: 0.9rem;     /* Menurunkan ukuran font agar footer lebih kecil */
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.2rem;     /* Mengurangi ukuran ikon sosial */
+    margin: 0 1rem;
+}
+
+footer .social-icons a:hover {
+    color: #00aaff;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .navbar-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .portfolio-item {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 100%;
+    }
+    .navbar a {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+    }
+    #skills ul {
+        padding-left: 0;
+    }
+}
+
+/* Tentang Saya Section */
+#about {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Kontainer utama */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+/* Profil (Kanan) */
+.profile-section {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-photo {
+    margin-bottom: 1.5rem;
+}
+
+.profile-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #004d7a;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.1);
+}
+
+.profile-text {
+    color: #555;
+}
+
+/* Tabel Biodata (Kiri) */
+.bio-details {
+    flex: 1;
+    color: #555;
+}
+
+.bio-details h3 {
+    font-size: 1.8rem;
+    color: #003c5f;
+    margin-top: 2rem;
+}
+
+.bio-details p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.biodata-table th, .biodata-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.biodata-table th {
+    background-color: #003c5f;
+    color: #fff;
+}
+
+.biodata-table td {
+    background-color: #f9f9f9;
+}
+
+.biodata-table tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+.biodata-table tr:hover td {
+    background-color: #007398;
+    color: white;
+}
+
+.biodata-table a {
+    color: #003c5f;
+    text-decoration: none;
+}
+
+.biodata-table a:hover {
+    color: #007398;
+}
+
+/* Teks (bergantian kiri-kanan) */
+.text-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Bagian kiri */
+.text-left {
+    flex: 1;
+    color: #555;
+}
+
+/* Bagian kanan */
+.text-right {
+    flex: 1;
+    color: #555;
+}
+
+.text-left h3, .text-right h3 {
+    font-size: 1.8rem;
+    color: #003c5f;
+    margin-bottom: 1.5rem;
+}
+
+.text-left p, .text-right p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-section, .bio-details {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .text-section {
+        flex-direction: column;
+    }
+
+    .text-left, .text-right {
+        max-width: 100%;
+    }
+}
+
+/* Efek Scroll Teks */
+.text-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    animation: scrollText 10s linear infinite;
+}
+
+.text-left, .text-right {
+    flex: 1;
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Animasi Scroll Teks */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Efek Ketikan Typewriter */
+.text-left h3, .text-right h3 {
+    font-size: 1.8rem;
+    color: #003c5f;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(30) 1s forwards, blinkCaret 0.75s step-end infinite;
+}
+
+.text-left p, .text-right p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #555;
+    opacity: 0;
+    animation: fadeInText 5s forwards 1s;
+}
+
+/* Typewriter Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking Cursor for Typewriter */
+@keyframes blinkCaret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Fade-in text */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Efek Scroll Teks untuk Elemen Tertentu */
+.text-section .text-left, .text-section .text-right {
+    animation: scrollText 20s linear infinite;
+}
+
+/* Responsif untuk Efek */
+@media (max-width: 768px) {
+    .text-section {
+        flex-direction: column;
+        animation: none; /* Matikan animasi scroll pada ponsel untuk kenyamanan pengguna */
+    }
+
+    .text-left h3, .text-right h3 {
+        width: auto;
+        animation: typing 5s steps(30) 1s forwards;
+    }
+
+    .text-left p, .text-right p {
+        animation: fadeInText 2s forwards 1.5s;
+    }
+}
+
+
+/* Galeri */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin: 1rem 0;
+}
+
+#gallery p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px); /* Membuat 3 kolom */
+    position: relative;
+    height: 300px; /* Tetapkan tinggi gambar agar seragam */
+    overflow: hidden;
+    border-radius: 10px; /* Jika ingin sedikit sudut melengkung */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Menyesuaikan gambar untuk ukuran seragam */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menyesuaikan gambar agar tidak terdistorsi dan pas dengan bingkai */
+}
+
+/* Efek zoom pada gambar saat hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Animasi efek hover */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk Myself and FirstLove */
+#myself-firstlove {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#myself-firstlove h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#myself-firstlove p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Menyusun gambar secara horizontal dengan jarak */
+#myself-firstlove .gallery-horizontal {
+    display: flex;
+    gap: 20px; /* Jarak antar gambar */
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+    animation: slide 30s linear infinite; /* Animasi bergerak terus-menerus */
+}
+
+#myself-firstlove .gallery-item {
+    flex-shrink: 0;
+    width: 300px; /* Sesuaikan lebar gambar */
+    text-align: center;
+    position: relative;
+}
+
+/* Bingkai untuk gambar */
+#myself-firstlove .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+#myself-firstlove .gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+#myself-firstlove .gallery-item figcaption {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Animasi love */
+.love-animation {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    animation: heart-beat 1s infinite;
+}
+
+.love-animation .heart {
+    color: #ff4d4d; /* Warna merah */
+    font-size: 60px;
+    display: inline-block;
+    transform-origin: center;
+}
+
+/* Efek animasi heartbeat */
+@keyframes heart-beat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animasi slide terus menerus */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* Posisi awal */
+    }
+    16.66% {
+        transform: translateX(-16.66%); /* Bergerak ke kiri 16.66% */
+    }
+    33.33% {
+        transform: translateX(-33.33%); /* Bergerak ke kiri 33.33% */
+    }
+    50% {
+        transform: translateX(-50%); /* Bergerak ke kiri 50% */
+    }
+    66.66% {
+        transform: translateX(-66.66%); /* Bergerak ke kiri 66.66% */
+    }
+    83.33% {
+        transform: translateX(-83.33%); /* Bergerak ke kiri 83.33% */
+    }
+    100% {
+        transform: translateX(-100%); /* Menyelesaikan pergerakan */
+    }
+}
